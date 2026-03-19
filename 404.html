@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirecting…</title>
+<script>
+(function() {
+  // Case-insensitive redirect for known project pages
+  var defined = { '/threatwatch/': true };
+  var path = location.pathname;
+  var lower = path.toLowerCase();
+  if (!defined[lower] && defined[lower.replace(/\/$/, '/') || lower + '/']) {
+    lower = lower.replace(/\/$/, '') + '/';
+  }
+  if (lower !== path && defined[lower]) {
+    location.replace(location.origin + lower + location.search + location.hash);
+  } else {
+    document.getElementById('msg').style.display = 'block';
+  }
+})();
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #0d1117; color: #e6edf3; }
+.box { text-align: center; }
+a { color: #58a6ff; }
+#msg { display: none; }
+</style>
+</head>
+<body>
+<div class="box" id="msg">
+  <h1>404</h1>
+  <p>Page not found.</p>
+  <p><a href="https://auvalabs.github.io/threatwatch/">Go to ThreatWatch</a></p>
+</div>
+</body>
+</html>
