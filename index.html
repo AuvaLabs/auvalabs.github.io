@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0;url=https://auvalabs.github.io/threatwatch/">
-<title>AuvaLabs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AuvaLabs — Open Source</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23060a0d'/><text x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='16' fill='%2300e5ff'>A</text></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0d1117;color:#e6edf3;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+.header{padding:48px 24px 32px;text-align:center}
+.header h1{font-size:28px;font-weight:700;letter-spacing:2px;margin-bottom:8px}
+.header h1 span{color:#00e5ff}
+.header p{color:#8b949e;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;padding:0 24px 48px;max-width:900px;width:100%}
+.card{background:#161b22;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:20px;transition:border-color 0.2s,transform 0.2s;text-decoration:none;color:inherit}
+.card:hover{border-color:rgba(0,229,255,0.3);transform:translateY(-2px)}
+.card h2{font-size:16px;font-weight:600;margin-bottom:6px;color:#e6edf3}
+.card .desc{font-size:13px;color:#8b949e;line-height:1.5;margin-bottom:12px}
+.card .links{display:flex;gap:12px;font-size:12px}
+.card .links a{color:#00e5ff;text-decoration:none;opacity:0.8}
+.card .links a:hover{opacity:1;text-decoration:underline}
+.tag{display:inline-block;font-size:10px;padding:2px 7px;border-radius:3px;background:rgba(0,229,255,0.08);color:#00e5ff;border:1px solid rgba(0,229,255,0.15);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px}
+.footer{padding:24px;color:#484f58;font-size:12px;text-align:center}
+.footer a{color:#8b949e;text-decoration:none}
+.footer a:hover{color:#e6edf3}
+@media(max-width:480px){.grid{grid-template-columns:1fr;padding:0 16px 32px}.header{padding:32px 16px 24px}.header h1{font-size:22px}}
+</style>
 </head>
 <body>
-<p>Redirecting to <a href="https://auvalabs.github.io/threatwatch/">ThreatWatch</a>…</p>
+<div class="header">
+  <h1><span>Auva</span>Labs</h1>
+  <p>Open-source security and developer tools</p>
+</div>
+<div class="grid">
+  <a class="card" href="https://auvalabs.github.io/threatwatch/">
+    <span class="tag">Threat Intelligence</span>
+    <h2>ThreatWatch</h2>
+    <div class="desc">Zero-cost, self-hosted cyber threat intelligence platform. 155+ RSS feeds, dark web monitoring, AI briefings, ransomware &amp; APT tracking.</div>
+    <div class="links">
+      <a href="https://threatwatch.auvalabs.com">Live Demo</a>
+      <a href="https://github.com/AuvaLabs/threatwatch">GitHub</a>
+    </div>
+  </a>
+  <a class="card" href="https://github.com/AuvaLabs/PhishRig">
+    <span class="tag">Red Team</span>
+    <h2>PhishRig</h2>
+    <div class="desc">Red team phishing engagement platform orchestrating Evilginx3, Gophish, and Mailhog for authorized security assessments.</div>
+    <div class="links">
+      <a href="https://github.com/AuvaLabs/PhishRig">GitHub</a>
+    </div>
+  </a>
+  <a class="card" href="https://github.com/AuvaLabs/claude-bridge">
+    <span class="tag">Developer Tools</span>
+    <h2>Claude Bridge</h2>
+    <div class="desc">Use your Claude Max subscription as a local OpenAI-compatible API. Multi-account load balancing, streaming, zero per-token cost.</div>
+    <div class="links">
+      <a href="https://github.com/AuvaLabs/claude-bridge">GitHub</a>
+    </div>
+  </a>
+</div>
+<div class="footer">
+  <a href="https://nicholai.me">nicholai.me</a> · <a href="https://github.com/AuvaLabs">GitHub</a>
+</div>
 </body>
 </html>
